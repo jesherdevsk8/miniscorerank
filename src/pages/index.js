@@ -1,23 +1,33 @@
-import fs from 'fs';
-import path from 'path';
+import axios from 'axios';
 import { useState } from 'react';
 import PlayerStatistics from '../components/PlayerStatistics';
 import TopScorers from '../components/TopScorers';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 export async function getServerSideProps() {
-  // const response = await fetch('../utils/__mocks__/classification.json');
-  // const data = await response.json();
-  // const players = data.data;
-  const filePath = path.join(process.cwd(), 'src', 'utils', '__mocks__', 'classification.json');
-  const fileData = fs.readFileSync(filePath, 'utf-8');
-  const players = JSON.parse(fileData).data;
-  const top_scorers = JSON.parse(fileData).top_scorers;
+  const url = process.env.MINISCORE_BASE_API_URL || 'http://localhost:3000';
+  try {
+    const { data } = await axios.get(url + '/api/v1/classification');
+    return {
+      props: {
+        players: data.data,
+        top_scorers: data.top_scorers,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data from the API:", error);
+    return {
+      props: {
+        players: [],
+        top_scorers: [],
+      },
+    };
+  }
 
   return {
     props: {
-      players,
-      top_scorers,
+      players: data.data,
+      top_scorers: data.top_scorers,
     },
   };
 }
@@ -57,3 +67,4 @@ const Home = ({ players, top_scorers }) => {
 };
 
 export default Home;
+
