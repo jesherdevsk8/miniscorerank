@@ -1,472 +1,65 @@
 {
-    "data": [
-      {
-        "name": "Jesher Minelli",
-        "statistics": {
-          "total_goals": 6,
-          "total_matches": 2,
-          "victories": 1,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 3,
-          "performance_percentage": 67,
-          "last_five_participations": [
-            "draw",
-            "victory"
-          ]
-        }
-      },
-      {
-        "name": "Ana Duarte",
-        "statistics": {
-          "total_goals": 13,
-          "total_matches": 2,
-          "victories": 1,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 6.5,
-          "performance_percentage": 67,
-          "last_five_participations": [
-            "draw",
-            "victory"
-          ]
-        }
-      },
-      {
-        "name": "Fernando Duarte",
-        "statistics": {
-          "total_goals": 2,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 2,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Francisco Duarte",
-        "statistics": {
-          "total_goals": 1,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 1,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Lucas Duarte",
-        "statistics": {
-          "total_goals": 3,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 3,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Mateus Duarte",
-        "statistics": {
-          "total_goals": 2,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 2,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Marcos Munari",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 0,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Fabio Silva",
-        "statistics": {
-          "total_goals": 2,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 2,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Eduardo Duarte",
-        "statistics": {
-          "total_goals": 2,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 2,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Devair Alberto",
-        "statistics": {
-          "total_goals": 1,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 1,
-          "average_goals_per_match": 1,
-          "performance_percentage": 33,
-          "last_five_participations": [
-            "draw"
-          ]
-        }
-      },
-      {
-        "name": "Gabriel",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "João Gabriel",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Luan Henrique",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Lincoln Souza",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Wilian",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Paulo Golero",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Francisco",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Ronaldo Duarte",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "José Carlos",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Gustavo",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Renan Poli",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Emerson Soares",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Michele",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Leonardo",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Paulo Duarte",
-        "statistics": {
-          "total_goals": 0,
-          "total_matches": 0,
-          "victories": 0,
-          "defeats": 0,
-          "draws": 0,
-          "average_goals_per_match": 0,
-          "performance_percentage": 0,
-          "last_five_participations": []
-        }
-      },
-      {
-        "name": "Daniel Duarte",
-        "statistics": {
-          "total_goals": 7,
-          "total_matches": 1,
-          "victories": 0,
-          "defeats": 1,
-          "draws": 0,
-          "average_goals_per_match": 7,
-          "performance_percentage": 0,
-          "last_five_participations": [
-            "defeat"
-          ]
-        }
+  "data": [
+    {
+      "name": "Jesher Minelli",
+      "statistics": {
+        "total_goals": 6,
+        "total_matches": 2,
+        "victories": 1,
+        "defeats": 0,
+        "draws": 1,
+        "average_goals_per_match": 3,
+        "performance_percentage": 67,
+        "last_five_participations": [
+          "draw",
+          "victory"
+        ]
       }
-    ],
-    "top_scorers": [
-      {
-        "name": "Ana Duarte",
-        "goals": 13
-      },
-      {
-        "name": "Daniel Duarte",
-        "goals": 7
-      },
-      {
-        "name": "Jesher Minelli",
-        "goals": 6
-      },
-      {
-        "name": "Lucas Duarte",
-        "goals": 3
-      },
-      {
-        "name": "Fernando Duarte",
-        "goals": 2
-      },
-      {
-        "name": "Eduardo Duarte",
-        "goals": 2
-      },
-      {
-        "name": "Fabio Silva",
-        "goals": 2
-      },
-      {
-        "name": "Mateus Duarte",
-        "goals": 2
-      },
-      {
-        "name": "Devair Alberto",
-        "goals": 1
-      },
-      {
-        "name": "Francisco Duarte",
-        "goals": 1
-      },
-      {
-        "name": "João Gabriel",
-        "goals": 0
-      },
-      {
-        "name": "Luan Henrique",
-        "goals": 0
-      },
-      {
-        "name": "Gabriel",
-        "goals": 0
-      },
-      {
-        "name": "Lincoln Souza",
-        "goals": 0
-      },
-      {
-        "name": "Wilian",
-        "goals": 0
-      },
-      {
-        "name": "Francisco",
-        "goals": 0
-      },
-      {
-        "name": "Ronaldo Duarte",
-        "goals": 0
-      },
-      {
-        "name": "Emerson Soares",
-        "goals": 0
-      },
-      {
-        "name": "Marcos Munari",
-        "goals": 0
-      },
-      {
-        "name": "Leonardo",
-        "goals": 0
-      },
-      {
-        "name": "Paulo Duarte",
-        "goals": 0
-      },
-      {
-        "name": "Michele",
-        "goals": 0
-      },
-      {
-        "name": "Renan Poli",
-        "goals": 0
-      },
-      {
-        "name": "Gustavo",
-        "goals": 0
-      },
-      {
-        "name": "José Carlos",
-        "goals": 0
-      },
-      {
-        "name": "Paulo Golero",
-        "goals": 0
+    },
+    {
+      "name": "Ronaldo Fenomeno",
+      "statistics": {
+        "total_goals": 13,
+        "total_matches": 2,
+        "victories": 1,
+        "defeats": 0,
+        "draws": 1,
+        "average_goals_per_match": 6.5,
+        "performance_percentage": 67,
+        "last_five_participations": [
+          "draw",
+          "victory"
+        ]
       }
-    ]
-  }
+    },
+    {
+      "name": "Romário Faria",
+      "statistics": {
+        "total_goals": 2,
+        "total_matches": 1,
+        "victories": 0,
+        "defeats": 0,
+        "draws": 1,
+        "average_goals_per_match": 2,
+        "performance_percentage": 33,
+        "last_five_participations": [
+          "draw"
+        ]
+      }
+    }
+  ],
+  "top_scorers": [
+    {
+      "name": "Ronaldo Fenomeno",
+      "goals": 13
+    },
+    {
+      "name": "Romário Faria",
+      "goals": 7
+    },
+    {
+      "name": "Jesher Minelli",
+      "goals": 6
+    }
+  ]
+}
