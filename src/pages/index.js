@@ -23,13 +23,6 @@ export async function getServerSideProps() {
       },
     };
   }
-
-  return {
-    props: {
-      players: data.data,
-      top_scorers: data.top_scorers,
-    },
-  };
 }
 
 const Home = ({ players, top_scorers }) => {
