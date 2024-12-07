@@ -1,4 +1,4 @@
-  const TopScorers = ({ scorers }) => {
+const TopScorers = ({ scorers }) => {
   return (
     <div className="overflow-x-auto shadow-lg sm:rounded-lg bg-white dark:bg-gray-900 p-2">
       <table className="min-w-full text-sm text-left text-gray-600 dark:text-gray-700">

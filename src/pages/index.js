@@ -1,60 +1,33 @@
 import axios from 'axios';
-import { useState } from 'react';
-import PlayerStatistics from '../components/PlayerStatistics';
-import TopScorers from '../components/TopScorers';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import Teams from '../components/Teams';
 
 export async function getServerSideProps() {
   const url = process.env.MINISCORE_BASE_API_URL || 'http://localhost:3000';
   try {
-    const { data } = await axios.get(url + '/api/v1/classification');
+    const { data } = await axios.get(url + '/api/v1/teams');
     return {
       props: {
-        players: data.data,
-        top_scorers: data.top_scorers,
-      },
-    };
+        teams: data.data,
+      }
+    }
   } catch (error) {
     console.error("Error fetching data from the API:", error);
     return {
       props: {
-        players: [],
-        top_scorers: [],
+        teams: [],
       },
     };
   }
 }
-
-const Home = ({ players, top_scorers }) => {
-  const [showTopScorers, setShowTopScorers] = useState(false);
-
-  const toggleTopScorers = () => {
-    setShowTopScorers(!showTopScorers);
-  };
+const Home = ({ teams }) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col sm:flex-row justify-between mb-8">
-        <h1 className="text-3xl font-semibold text-center sm:text-left mb-4 sm:mb-0">Classificação do Time</h1>
-        <button
-          onClick={toggleTopScorers}
-          className="flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          {showTopScorers ? (
-            <>
-              <FiChevronUp className="mr-2" />
-              Ver Classificação
-            </>
-          ) : (
-            <>
-              <FiChevronDown className="mr-2" />
-              Ver Artilheiros
-            </>
-          )}
-        </button>
+      <div className="flex flex-col sm:flex-row justify-center mb-8">
+        <h1 className="text-4xl font-bold text-center mb-8 sm:mb-0 tracking-wide">Escolha seu time</h1>
       </div>
 
-      {showTopScorers ? <TopScorers scorers={top_scorers} /> : <PlayerStatistics players={players} />}
+      {<Teams teams={teams} />}
     </div>
   );
 };
