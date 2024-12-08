@@ -17,7 +17,7 @@ bun dev
 ## docker
 
 ```bash
-docker build -t score_rank_it .
+docker build -t score_rank_it --target production .
 docker run -p 3004:3000 -e NODE_ENV=production score_rank_it
 docker container logs -f score_rank_it
 
