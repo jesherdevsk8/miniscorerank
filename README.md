@@ -14,6 +14,18 @@ pnpm dev
 bun dev
 ```
 
+## docker
+
+```bash
+docker build -t score_rank_it .
+docker run -p 3004:3000 -e NODE_ENV=production score_rank_it
+docker container logs -f score_rank_it
+
+# ou
+
+docker compose up --build -d && docker compose attach app
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.

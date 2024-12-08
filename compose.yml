@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    environment:
+      NODE_ENV: production
+      # MINISCORE_BASE_API_URL: http:/seu-ip/3000
+    ports:
+      - "3004:3000"
+    volumes:
+      - .:/app
+    command: npm run start
