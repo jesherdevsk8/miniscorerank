@@ -12,7 +12,7 @@ const Teams = ({ teams }) => {
             return (
               <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-200">
                 <td className="px-4 py-2 text-left text-white">
-                  <a href={`/${team.slug}/classification`} className="hover:underline">
+                  <a href={`/${team.slug}/classifications`} className="hover:underline">
                     {team.name}
                   </a>
                 </td>
