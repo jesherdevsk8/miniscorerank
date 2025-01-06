@@ -2,7 +2,7 @@ const PlayerStatistics = ({ players }) => {
   return (
     <div className="overflow-x-auto shadow-lg sm:rounded-lg bg-gray-200 dark:bg-gray-900 p-2">
       <table className="min-w-full text-sm text-left text-gray-800 dark:text-gray-300">
-        <thead className="text-xs uppercase bg-gradient-to-r from-blue-800 to-indigo-800 dark:from-gray-700 dark:to-gray-800 dark:text-gray-300">
+        <thead className="text-xs uppercase bg-gradient-to-r from-blue-800 to-indigo-800 dark:from-blue-700 dark:to-indigo-800 dark:text-gray-300">
           <tr>
             <th scope="col" className="px-4 py-3 text-left text-white">
               Jogador
