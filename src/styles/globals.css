@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cores no modo claro */
 :root {
   --background: #ffffff;
   --foreground: #212121;
@@ -11,6 +12,7 @@
   --neutral: #cccccc;
 }
 
+/* Cores no modo escuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
@@ -23,9 +25,10 @@
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
   font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-primary {
