@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import PlayerStatistics from '../../components/PlayerStatistics';
 import TopScorers from '../../components/TopScorers';
+import LeastConcededGoalkeepers from '../../components/LeastConcededGoalkeepers';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 export async function getServerSideProps(context) {
@@ -13,9 +14,10 @@ export async function getServerSideProps(context) {
     const { data } = await axios.get(`${url}/api/v1/teams/${slug}/classifications?year=${year}`);
     return {
       props: {
-        players: data.data,
-        top_scorers: data.top_scorers,
-        slug: slug,
+        players: data.data || [],
+        top_scorers: data.top_scorers || [],
+        least_conceded_goalkeepers: data.least_conceded_goalkeepers || [],
+        slug,
         initialYear: year,
       },
     };
@@ -25,6 +27,7 @@ export async function getServerSideProps(context) {
       props: {
         players: [],
         top_scorers: [],
+        least_conceded_goalkeepers: [],
         slug: '',
         initialYear: new Date().getFullYear(),
       },
@@ -32,8 +35,9 @@ export async function getServerSideProps(context) {
   }
 }
 
-const Home = ({ players, top_scorers, slug, initialYear }) => {
+const Home = ({ players, top_scorers, least_conceded_goalkeepers, slug, initialYear }) => {
   const [showTopScorers, setShowTopScorers] = useState(false);
+  const [showGoalkeepers, setShowGoalkeepers] = useState(false);
   const [year, setYear] = useState(initialYear);
 
   // Atualiza o ano no cliente
@@ -49,6 +53,10 @@ const Home = ({ players, top_scorers, slug, initialYear }) => {
     setShowTopScorers(!showTopScorers);
   };
 
+  const toggleGoalkeepers = () => {
+    setShowGoalkeepers(!showGoalkeepers);
+  };
+
   const handleYearChange = (e) => {
     setYear(e.target.value);
     window.location.href = `${window.location.origin}/${slug}/classifications/?year=${e.target.value}`;
@@ -58,7 +66,7 @@ const Home = ({ players, top_scorers, slug, initialYear }) => {
     <div className="container mx-auto px-2 py-4 sm:px-2">
       <div className="flex flex-col sm:flex-row justify-between mb-8">
         <h1 className="text-3xl font-bold text-center mb-8 sm:mb-0 tracking-wide">Classificação do Time</h1>
-        <div className="flex items-center justify-center sm:justify-end mb-2 sm:mb-0">
+        <div className="flex justify-center items-center">
           <label
             htmlFor="year"
             className="mr-2 text-sm font-medium text-gray-900 dark:text-gray-300"
@@ -70,23 +78,26 @@ const Home = ({ players, top_scorers, slug, initialYear }) => {
               id="year"
               value={year}
               onChange={handleYearChange}
-              className="w-24 px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:focus:border-blue-500"
+              className="w-24 px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:focus:border-indigo-500"
             >
-              {/* TODO: Pegar em uma api do backend que tras todos anos existentes no bancdo  */}
               {Array.from({ length: 5 }).map((_, i) => (
-                <option key={i + 1} value={new Date().getFullYear() - i}>
+                <option key={i} value={new Date().getFullYear() - i}>
                   {new Date().getFullYear() - i}
                 </option>
               ))}
             </select>
-            <FiChevronDown className="absolute top-1/2 right-2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300" />
+            <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+              <FiChevronDown className="w-5 h-5 text-gray-400 dark:text-gray-500" />
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="mt-4 sm:mt-0 flex items-center justify-start sm:justify-start ml-2 sm:ml-0">
+      <nav className="flex items-center justify-between w-full overflow-x-auto shadow-lg sm:rounded-lg bg-gray-100 dark:bg-gray-800 p-2">
+        <div className="flex items-center justify-start space-x-4">
           <button
             onClick={toggleTopScorers}
-            className="flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-700 dark:bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-center dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-800 to-indigo-800 dark:from-blue-700 dark:to-indigo-800 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-center dark:hover:bg-gradient-to-r dark:hover:from-blue-600 dark:hover:to-indigo-600 dark:focus:ring-blue-800"
           >
             {showTopScorers ? (
               <>
@@ -100,10 +111,34 @@ const Home = ({ players, top_scorers, slug, initialYear }) => {
               </>
             )}
           </button>
+          <button
+            onClick={toggleGoalkeepers}
+            className="flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-800 to-indigo-800 dark:from-blue-700 dark:to-indigo-800 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-center dark:hover:bg-gradient-to-r dark:hover:from-blue-600 dark:hover:to-indigo-600 dark:focus:ring-blue-800"
+          >
+            {showGoalkeepers ? (
+              <>
+                <FiChevronUp className="mr-2" />
+                Goleiros
+              </>
+            ) : (
+              <>
+                <FiChevronDown className="mr-2" />
+                Goleiros
+              </>
+            )}
+          </button>
         </div>
-      </div>
+      </nav>
 
-      {showTopScorers ? <TopScorers scorers={top_scorers} /> : <PlayerStatistics players={players} />}
+      {showTopScorers ? (
+        <TopScorers scorers={top_scorers} />
+      ) : (
+        <PlayerStatistics players={players} />
+      )}
+
+      {showGoalkeepers && (
+        <LeastConcededGoalkeepers goals={least_conceded_goalkeepers} />
+      )}
     </div>
   );
 };
