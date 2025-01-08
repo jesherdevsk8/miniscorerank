@@ -66,9 +66,10 @@ const PlayerStatistics = ({ players }) => {
                 <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300">
                   {player.statistics.average_goals_per_match}
                 </td>
-                <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300">
+                <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300 flex items-center justify-center">
                   <LastFiveParticipations 
                     last_five_participations={player.statistics.last_five_participations} 
+                    className="flex items-center justify-center w-full"
                   />
                 </td>
               </tr>
