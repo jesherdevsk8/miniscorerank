@@ -28,7 +28,7 @@ const PlayerStatistics = ({ players }) => {
               GM
             </th>
             <th scope="col" className="px-2 sm:px-4 py-2 text-center text-white">
-              SG
+              MG
             </th>
             <th scope="col" className="px-2 sm:px-4 py-2 text-center text-white">
               Últimas 5
