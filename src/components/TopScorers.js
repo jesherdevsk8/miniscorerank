@@ -11,7 +11,7 @@ const TopScorers = ({ scorers }) => {
         <tbody>
           {scorers.map((scorer, index) => (
             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-200">
-              <td className="px-2 sm:px-4 py-2 text-left text-gray-800 dark:text-gray-300 sm:pl-6">
+              <td className="px-2 sm:px-4 py-2 font-semibold text-left text-gray-800 dark:text-gray-300 sm:pl-6">
                 {index + 1} &nbsp; {scorer.name}
               </td>
               <td className="px-2 sm:px-4 py-2 text-right text-gray-800 dark:text-gray-300">{scorer.goals}</td>
