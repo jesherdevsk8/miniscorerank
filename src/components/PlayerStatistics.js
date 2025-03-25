@@ -25,12 +25,6 @@ const PlayerStatistics = ({ players }) => {
               D
             </th>
             <th scope="col" className="px-2 sm:px-4 py-2 text-center text-white">
-              GM
-            </th>
-            <th scope="col" className="px-2 sm:px-4 py-2 text-center text-white">
-              MG
-            </th>
-            <th scope="col" className="px-2 sm:px-4 py-2 text-center text-white">
               Últimas 5
             </th>
           </tr>
@@ -59,12 +53,6 @@ const PlayerStatistics = ({ players }) => {
                 </td>
                 <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300">
                   {player.statistics.defeats}
-                </td>
-                <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300">
-                  {player.statistics.total_goals}
-                </td>
-                <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300">
-                  {player.statistics.average_goals_per_match}
                 </td>
                 <td className="px-2 sm:px-4 py-1 sm:py-2 text-center text-gray-800 dark:text-gray-300 flex items-center justify-center">
                   <LastFiveParticipations 
